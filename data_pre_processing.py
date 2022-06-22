@@ -12,9 +12,11 @@ DataDir = '/Volumes/COMPA/upward_facing_cameras_data/raw_data'
 OutputDir_str = '/Volumes/COMPA/upward_facing_cameras_data/pre_processed_data'
 
 t = time.strftime("%Y%m%d_%H%M%S", time.localtime())
-experiment_dates = ['0629']
+#experiment_dates = ['0629']
+experiment_dates = ['0611']
 # release time to cut videos
-release_times = ['17_43_20']
+#release_times = ['17_43_20']
+release_times = ['07_38_00']
 # ###############################################################################
 
 all_release_t_in_secs = []

@@ -8,8 +8,12 @@ import cv2
 import json
 ###############################################################################
 
-Datadir = '/Volumes/COMPA/upward_facing_cameras_data/pre_processed_data/pre_processed_data_0629/frames_ufc_20_01_vi_0001_20190629_171133/'
-Outdir = '/Volumes/COMPA/upward_facing_cameras_data/pre_processed_data/pre_processed_data_0629/'
+# Datadir = '/Volumes/COMPA/upward_facing_cameras_data/pre_processed_data/pre_processed_data_0629/frames_ufc_20_01_vi_0001_20190629_171133/'
+# Outdir = '/Volumes/COMPA/upward_facing_cameras_data/pre_processed_data/'
+# ###############################################################################
+
+Datadir = '/Volumes/COMPA/upward_facing_cameras_data/pre_processed_data/pre_processed_data_0611/frames_ufc_01_vi_0000_20190611_062021/'
+Outdir = '/Volumes/COMPA/upward_facing_cameras_data/pre_processed_data/'
 ###############################################################################
 
 def make_dict_per_frame(Datadir):
@@ -55,11 +59,11 @@ all_frames_dict = make_dict_per_frame(Datadir)
 #create json file and dump the dictionary there
 json_filename =  Outdir+'all_frames_dict.json'
 
-save_new = 1
+save_new = 0
 if save_new == 1:
     save_dict_to_json(all_frames_dict, json_filename)
 else:
-    pass
-    #add_dicts_to_json(all_frames_dict, json_filename)
+    #pass
+    add_dicts_to_json(all_frames_dict, json_filename)
 
 print('list of dictionaries saved', json_filename)
